@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <button class="b200">click 200</button>
+    <button class="b400">click 400</button>
+    <div></div>
+    <script src="../assets/js/animate.js"></script>
+    <script>
+        var b200 = document.querySelector('.b200');
+        var b400 = document.querySelector('.b400');
+        var div = document.querySelector('div');
+        b200.addEventListener('click', function() {
+            slow(div, 200, function() {alert(1)});
+        });
+        b400.addEventListener('click', function() {
+            slow(div, 400, function() {alert(1)});
+        });
+    </script>
+</body>
+</html>
